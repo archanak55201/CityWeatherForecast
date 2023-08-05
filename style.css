@@ -1,0 +1,104 @@
+body{
+    top:0px;
+    left: 0px;
+   background: linear-gradient(280deg, #2f077a 3.10%, #1d083d 50%);
+    color: white;
+    font-family: Inter;
+}
+.heading{
+    margin-top: 5vh;
+    text-align: center;
+    font-weight: 800;
+    font-size: 54px;
+    margin-bottom: 5vh;
+}
+.divinput{
+    /* border: 1px solid rgb(73, 53, 53); */
+    padding-left: 0.5vw;
+    justify-self: right;
+    box-shadow:  0px -2px 10px rgb(15, 3, 34);
+    border-radius: 5px;
+}
+
+input{
+    width: 30vw;
+    padding: 10px;
+    margin: 5px;
+    font-size: 17px;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    color: white;
+}
+.divsubmit{
+    /* border: 1px solid white; */
+    justify-self:start;
+    box-shadow:  0px -2px 10px #1a053d;
+    border-radius: 5px;
+    background-color: #8549f4;
+}
+.divsubmit>button{
+    padding: 13px 27px 10px 27px;
+    
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+
+}
+.main-content{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 70px;
+    gap: 1vw;
+    row-gap: 5vh;
+}
+.grid-item{
+    /* border: 1px solid white; */
+    padding: 20px;
+    
+}
+.grid-content{
+    /* border:1px solid green; */
+    background-image: url("Rectangle\ 1.svg");
+    background-repeat: no-repeat;
+    background-size: 120%;
+    border-radius: 15px;
+    height: 222px;
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 5px ;
+
+
+    /* background-position-y: 100%; */
+}
+.details{
+    /* padding-top:4vh; */
+    display: flex;
+    flex-direction: column;
+   
+}
+.high-low{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    font-size: 18px;
+    color:rgb(176, 172, 172);
+    margin-left: 10px;
+}
+.cot-type{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+    font-size: 24px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-left: 10px;
+    
+}
+.dayType{
+    /* padding-left: 8vw; */
+}
