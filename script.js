@@ -22,6 +22,13 @@ async function weatherReport(){
         const response = await fetch(apiUrl);
         const result = await response.json();
         console.log(result);
+        if(result.cod==="404"){
+           
+            const del=set.delete(city);
+            console.log(del);
+            alert(`${city} city is not found`);
+
+        }
         const obj ={
             name:`${result.name}`,//
             type:`${result.weather[0].main}`,//
@@ -53,15 +60,15 @@ async function weatherReport(){
     gridItem.innerHTML = `
             <div class="grid-content">
                             
-                <div style=" display: flex;flex-direction: row;justify-content: space-between;">
-                    <div  style=" display: flex;flex-direction: column; padding-bottom: 5px;">
+                <div style=" display: flex;flex-direction: row;justify-content: space-between;font-size: 26px;white-space: nowrap;">
+                    <div  style=" display: flex;flex-direction: column; padding-bottom: 5px;padding-top: 3vh;">
                     <span><i class="fa-solid fa-gauge-simple-high" style="color: #e6ebf4;padding-right: 7px;"></i>${value.winds}km/h</span> 
                     <span><i class="fa-regular fa-compass" style="color: #eaecf0;padding-right: 7px;"></i>${value.deg}</span> 
-                    <span><i class="fa-solid fa-droplet" style="color: #f0f2f5;padding-right: 7px;"></i>${value.cloudp}</span> 
+                    <span><i class="fa-solid fa-droplet" style="color: #f0f2f5;padding-right: 7px;"></i>${value.cloudp}%</span> 
                         
                         
                     </div>
-                    <img src="${weathertype}" style="height: 20vh;position: absolute;padding-left: 15vw;">
+                    <img src="${weathertype}" style="height: 13vh;width: 13vw; padding-right: 2vw;">
                 </div>
                 
                 <div class="details">
@@ -80,7 +87,7 @@ async function weatherReport(){
                     </div>
                     <div class="cot-type">
                         <div>${value.name},${value.code}</div>   
-                        <div class="dayType">${value.type}</div>   
+                        <div class="dayType">- ${value.type}</div>   
                     </div>
                 </div>
 
