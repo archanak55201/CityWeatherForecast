@@ -4,7 +4,8 @@ console.log("script is connected");
 const MainContent = document.getElementsByClassName("main-content")[0];
 const set = new Set();
 const button = document.getElementById("search");
-button.addEventListener("submit",function(event){
+const clearbtn = document.getElementById("cleardata");
+button.addEventListener("click",function(event){
     event.preventDefault();
     const cityName = document.getElementById("cityName");
     const city = cityName.value;
@@ -72,7 +73,7 @@ async function weatherReport(){
                 </div>
                 
                 <div class="details">
-                    <div style="font-size: 65px;">
+                    <div style="font-size: 5rem;">
                 
                         ${value.temp}<sup style="font-size: 20px;position: absolute;">o</sup>
             
@@ -117,4 +118,44 @@ function getWeatherImg(type){
         return "sun.svg";
     }
 }
+
+clearbtn.addEventListener("click",()=>{
+    MainContent.innerHTML="";
+    MainContent.innerHTML=`
+    <div class="grid-item">
+    <div class="grid-content">
+       
+        <div style=" display: flex;flex-direction: row;justify-content: space-between;font-size: 26px;white-space: nowrap;">
+            <div  style=" display: flex;flex-direction: column;padding-bottom: 5px;">
+               <!-- <span><i class="fa-solid fa-gauge-simple-high" style="color: #e6ebf4;padding-right: 7px;"></i>5km/h</span> 
+               <span><i class="fa-regular fa-compass" style="color: #eaecf0;padding-right: 7px;"></i>northeast</span> 
+               <span><i class="fa-solid fa-droplet" style="color: #f0f2f5;padding-right: 7px;"></i>100%</span> 
+                
+                 -->
+            </div>
+            <img src="sun.svg" alt="." style="height: 15vh;padding-right: 2vw;">
+        </div>
+        
+        <div class="details" style="padding-bottom: 3vh;">
+            <div style="font-size: 35px;">
+          
+                Search city to get the Weather Report...
+            </div>
+            <div class="high-low">
+                Search city to get the Weather Report...
+            </div>
+            <div class="high-low">
+                <!-- <div>Humidity:23</div>
+                <div>pressure:55</div> -->
+            </div>
+            <div class="cot-type">
+                <!-- <div> Tokya,Japan</div>   
+                <div class="dayType"> shower</div>    -->
+            </div>
+        </div>
+
+    </div>
+</div>
+    `;
+})
 

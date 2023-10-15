@@ -1,8 +1,13 @@
+
 body{
     top:0px;
     left: 0px;
-   background: linear-gradient(280deg, #2f077a 3.10%, #1d083d 50%);
+    background: linear-gradient(180deg, #7a90e8 3.10%, #7f6b77 50%);
+    /* background-image: url(https://c8.alamy.com/comp/2B23YW6/gorgeous-cloudscape-in-springtime-weather-background-with-dynamic-cloud-arrangement-on-a-blue-sky-sunny-and-windy-day-good-weather-forecast-concept-2B23YW6.jpg);  */
+    background-size: auto;
+    /* background-repeat: no-repeat; */
     color: white;
+    height: 100%;
     font-family: Inter;
 }
 .heading{
@@ -30,11 +35,15 @@ input{
     outline: none;
     color: white;
 }
+::placeholder {
+    color: white; /* Change this color to your desired placeholder color */
+}
 .divsubmit{
     /* border: 1px solid white; */
     justify-self:start;
     box-shadow:  0px -2px 10px #1a053d;
     border-radius: 5px;
+    
     background-color: #8549f4;
 }
 .divsubmit>button{
@@ -90,6 +99,7 @@ input{
 .grid-content{
     /* border:1px solid green; */
     background-image: url("Rectangle\ 1.svg");
+    /* background: linear-gradient(to left,rgb(199, 141, 141),rgb(215, 215, 169)); */
     background-repeat: no-repeat;
     background-size:cover;
     border-radius: 15px;

@@ -13,17 +13,22 @@
    
     <div style="">
         <div class="heading">
-            <span>Weather Cities Project</span>
+            <span>City Weather Forecast</span>
         </div>
-        <form id="search">
+        <form>
             <div style="display: grid;grid-template-columns: 5fr 3fr;gap:20px">
                 
                     <div class="divinput">
                         <img src="magnifyingglass.svg" alt="" style="padding-top:0;width: 15px;height:15px;">
-                        <input required type="text" placeholder="Search for a city or airport" name="cityName" id="cityName">
+                        <input required type="text" placeholder="Search for a city or airport" name="cityName" id="cityName" style="color: white;">
                     </div>
-                    <div class="divsubmit">
-                        <button  type="submit">Add City</button>
+                    <div style="display: flex;gap: 20px;">
+                        <div class="divsubmit">
+                            <button   id="search" type="submit">Add City</button>   
+                        </div>
+                        <div class="divsubmit">
+                            <button  id="cleardata" type="submit">Clear Data</button>
+                        </div>
                     </div>
                 
             </div>
